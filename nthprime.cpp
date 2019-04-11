@@ -1,4 +1,4 @@
-int getnthprime() {
+int getnthprime(int number) {
 	int count = 2;
 	int check = 6;
 	bool prevprime = true;
@@ -6,7 +6,7 @@ int getnthprime() {
 	vector<int> primes;
 	primes.push_back(2);
 	primes.push_back(3);
-	while (count<10001) {
+	while (count<number) {
 		for (int i = 0; primes[i] <= sqrt(check + 1); i++) {
 			if ((check - 1) % primes[i] == 0) {
 				prevprime = false;
